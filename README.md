@@ -1,3 +1,10 @@
+changes by hyzboy
+===================
+
+- only support OpenGL ES 3.0
+- don't support dynamic OpenGL ES 3.0
+
+
 gles3jni
 =========
 gles3jni is an Android C++ sample that demonstrates how to use OpenGL ES 3.0 from JNI/native code.
