@@ -1,0 +1,17 @@
+# ninja log v5
+0	7	0	clean	3ef55b6c496f955a
+1	7	0	clean	3ef55b6c496f955a
+2	115	647769561	CMakeFiles/gles3jni.dir/RendererES3.cpp.o	97fa3d0bbee13621
+4	118	647769561	CMakeFiles/gles3jni.dir/RendererES2.cpp.o	e25eb8a6e1d16c65
+0	181	647769561	CMakeFiles/gles3jni.dir/gles3jni.cpp.o	d99320c9cb3843d9
+181	1302	647769563	H:/gles3jni/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libgles3jni.so	f4a039e9af183868
+0	198	647769908	build.ninja	e31eec24577b8bd0
+0	7	0	clean	3ef55b6c496f955a
+0	6	0	clean	3ef55b6c496f955a
+0	6	0	clean	3ef55b6c496f955a
+0	125	647769939	build.ninja	e31eec24577b8bd0
+2	114	647769939	CMakeFiles/gles3jni.dir/RendererES3.cpp.o	97fa3d0bbee13621
+4	145	647769939	CMakeFiles/gles3jni.dir/gles3jni.cpp.o	d99320c9cb3843d9
+145	1117	647769940	H:/gles3jni/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libgles3jni.so	576141356210fcf8
+0	6	0	clean	3ef55b6c496f955a
+0	5	0	clean	3ef55b6c496f955a

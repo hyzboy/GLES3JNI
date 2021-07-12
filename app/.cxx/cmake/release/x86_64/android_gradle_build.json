@@ -1,0 +1,38 @@
+{
+  "buildFiles": [
+    "H:\\gles3jni\\app\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "I:\\Development\\Android\\SDK\\cmake\\3.18.1\\bin\\ninja.exe",
+      "-C",
+      "H:\\gles3jni\\app\\.cxx\\cmake\\release\\x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "I:\\Development\\Android\\SDK\\cmake\\3.18.1\\bin\\ninja.exe",
+    "-C",
+    "H:\\gles3jni\\app\\.cxx\\cmake\\release\\x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "gles3jni::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86_64",
+      "artifactName": "gles3jni",
+      "output": "H:\\gles3jni\\app\\build\\intermediates\\cmake\\release\\obj\\x86_64\\libgles3jni.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "I:\\Development\\Android\\SDK\\ndk\\22.1.7171670\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+      "cppCompilerExecutable": "I:\\Development\\Android\\SDK\\ndk\\22.1.7171670\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

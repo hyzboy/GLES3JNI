@@ -1,0 +1,4 @@
+ninja: Entering directory `H:\gles3jni\app\.cxx\cmake\debug\x86'
+[1/3] Building CXX object CMakeFiles/gles3jni.dir/RendererES3.cpp.o
+[2/3] Building CXX object CMakeFiles/gles3jni.dir/gles3jni.cpp.o
+[3/3] Linking CXX shared library H:\gles3jni\app\build\intermediates\cmake\debug\obj\x86\libgles3jni.so

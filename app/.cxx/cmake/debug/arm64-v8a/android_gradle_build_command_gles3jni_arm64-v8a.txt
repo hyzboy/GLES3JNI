@@ -1,0 +1,7 @@
+Executable : I:\Development\Android\SDK\cmake\3.18.1\bin\ninja.exe
+arguments : 
+-C
+H:\gles3jni\app\.cxx\cmake\debug\arm64-v8a
+gles3jni
+jvmArgs : 
+

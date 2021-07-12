@@ -1,0 +1,72 @@
+[
+  {
+    "level": "INFO",
+    "message": "Start JSON generation. Platform version: 24 min SDK version: x86_64",
+    "file": "H:\\gles3jni\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|x86_64",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "rebuilding JSON H:\\gles3jni\\app\\.cxx\\cmake\\debug\\x86_64\\android_gradle_build.json due to:",
+    "file": "H:\\gles3jni\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|x86_64",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "- a dependent build file changed",
+    "file": "H:\\gles3jni\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|x86_64",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "  - H:\\gles3jni\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "file": "H:\\gles3jni\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|x86_64",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "keeping json folder \u0027H:\\gles3jni\\app\\.cxx\\cmake\\debug\\x86_64\u0027 but regenerating project",
+    "file": "H:\\gles3jni\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|x86_64",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "executing cmake Executable : I:\\Development\\Android\\SDK\\cmake\\3.18.1\\bin\\cmake.exe\narguments : \n-HH:\\gles3jni\\app\\src\\main\\cpp\n-DCMAKE_FIND_ROOT_PATH\u003dH:\\gles3jni\\app\\.cxx\\cmake\\debug\\prefab\\x86_64\\prefab\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DCMAKE_TOOLCHAIN_FILE\u003dI:\\Development\\Android\\SDK\\ndk\\22.1.7171670\\build\\cmake\\android.toolchain.cmake\n-DANDROID_ABI\u003dx86_64\n-DANDROID_NDK\u003dI:\\Development\\Android\\SDK\\ndk\\22.1.7171670\n-DANDROID_PLATFORM\u003dandroid-24\n-DCMAKE_ANDROID_ARCH_ABI\u003dx86_64\n-DCMAKE_ANDROID_NDK\u003dI:\\Development\\Android\\SDK\\ndk\\22.1.7171670\n-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dH:\\gles3jni\\app\\build\\intermediates\\cmake\\debug\\obj\\x86_64\n-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003dH:\\gles3jni\\app\\build\\intermediates\\cmake\\debug\\obj\\x86_64\n-DCMAKE_MAKE_PROGRAM\u003dI:\\Development\\Android\\SDK\\cmake\\3.18.1\\bin\\ninja.exe\n-DCMAKE_SYSTEM_NAME\u003dAndroid\n-DCMAKE_SYSTEM_VERSION\u003d24\n-DANDROID_STL\u003dc++_static\n-BH:\\gles3jni\\app\\.cxx\\cmake\\debug\\x86_64\n-GNinja\njvmArgs : \n\n",
+    "file": "H:\\gles3jni\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|x86_64",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "Executable : I:\\Development\\Android\\SDK\\cmake\\3.18.1\\bin\\cmake.exe\narguments : \n-HH:\\gles3jni\\app\\src\\main\\cpp\n-DCMAKE_FIND_ROOT_PATH\u003dH:\\gles3jni\\app\\.cxx\\cmake\\debug\\prefab\\x86_64\\prefab\n-DCMAKE_BUILD_TYPE\u003dDebug\n-DCMAKE_TOOLCHAIN_FILE\u003dI:\\Development\\Android\\SDK\\ndk\\22.1.7171670\\build\\cmake\\android.toolchain.cmake\n-DANDROID_ABI\u003dx86_64\n-DANDROID_NDK\u003dI:\\Development\\Android\\SDK\\ndk\\22.1.7171670\n-DANDROID_PLATFORM\u003dandroid-24\n-DCMAKE_ANDROID_ARCH_ABI\u003dx86_64\n-DCMAKE_ANDROID_NDK\u003dI:\\Development\\Android\\SDK\\ndk\\22.1.7171670\n-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\n-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dH:\\gles3jni\\app\\build\\intermediates\\cmake\\debug\\obj\\x86_64\n-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003dH:\\gles3jni\\app\\build\\intermediates\\cmake\\debug\\obj\\x86_64\n-DCMAKE_MAKE_PROGRAM\u003dI:\\Development\\Android\\SDK\\cmake\\3.18.1\\bin\\ninja.exe\n-DCMAKE_SYSTEM_NAME\u003dAndroid\n-DCMAKE_SYSTEM_VERSION\u003d24\n-DANDROID_STL\u003dc++_static\n-BH:\\gles3jni\\app\\.cxx\\cmake\\debug\\x86_64\n-GNinja\njvmArgs : \n\n",
+    "file": "H:\\gles3jni\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|x86_64",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "done executing cmake",
+    "file": "H:\\gles3jni\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|x86_64",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "write command file H:\\gles3jni\\app\\.cxx\\cmake\\debug\\x86_64\\build_command.txt",
+    "file": "H:\\gles3jni\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|x86_64",
+    "diagnosticCode": "UNKNOWN"
+  },
+  {
+    "level": "INFO",
+    "message": "JSON generation completed without problems",
+    "file": "H:\\gles3jni\\app\\src\\main\\cpp\\CMakeLists.txt",
+    "tag": "debug|x86_64",
+    "diagnosticCode": "UNKNOWN"
+  }
+]
