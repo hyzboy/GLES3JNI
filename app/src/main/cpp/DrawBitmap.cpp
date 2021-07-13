@@ -23,7 +23,6 @@ void DrawBitmap::Draw()
         glDisable(GL_BLEND);
     }
 
-    ClearGLError();
     shader->Begin();
 
         texture->Bind(shader->GetTextureLocation());

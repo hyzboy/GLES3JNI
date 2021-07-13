@@ -8,7 +8,9 @@ ShaderModule::~ShaderModule()
 
 bool ShaderModule::Begin()
 {
+    ClearGLError();
     glUseProgram(program);
+    return GetGLError();
 }
 
 void ShaderModule::End()
