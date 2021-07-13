@@ -20,6 +20,8 @@
 #include <time.h>
 
 #include "gles3jni.h"
+#include"CameraInterface.h"
+#include"ShaderModule.h"
 
 const Vertex QUAD[4] = {
     // Square with diagonal < 2 so that it fits in a [-1 .. 1]^2 square
@@ -258,6 +260,11 @@ Java_com_android_gles3jni_GLES3JNILib_init(JNIEnv* env, jobject obj) {
     const char* versionStr = (const char*)glGetString(GL_VERSION);
     if (strstr(versionStr, "OpenGL ES 3.")) {
         g_renderer = createES3Renderer();
+
+        StartVirtualCameraInterface();
+
+        InitShaderModule();
+        ShaderModule *sm=GetShaderModule(InlineShader::SimpleTexture);
     } else {
         ALOGE("Unsupported OpenGL ES version");
     }

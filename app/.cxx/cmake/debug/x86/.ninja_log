@@ -1,7 +1,0 @@
-# ninja log v5
-0	6	0	clean	3ef55b6c496f955a
-0	106	647769941	CMakeFiles/gles3jni.dir/RendererES3.cpp.o	db408808bbb842cc
-3	135	647769941	CMakeFiles/gles3jni.dir/gles3jni.cpp.o	5a70a6554f96df0a
-135	1103	647769942	H:/gles3jni/app/build/intermediates/cmake/debug/obj/x86/libgles3jni.so	ee59b37890be43fe
-0	6	0	clean	3ef55b6c496f955a
-0	6	0	clean	3ef55b6c496f955a

@@ -27,7 +27,7 @@
 
 static const char VERTEX_SHADER[] =
     "#version 300 es\n"
-    "layout(location = " STRV(POS_ATTRIB) ") in vec2 pos;\n"
+    "layout(location=" STRV(POS_ATTRIB) ") in vec2 pos;\n"
     "layout(location=" STRV(COLOR_ATTRIB) ") in vec4 color;\n"
     "layout(location=" STRV(SCALEROT_ATTRIB) ") in vec4 scaleRot;\n"
     "layout(location=" STRV(OFFSET_ATTRIB) ") in vec2 offset;\n"

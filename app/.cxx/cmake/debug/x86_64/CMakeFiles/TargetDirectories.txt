@@ -1,3 +1,0 @@
-H:/gles3jni/app/.cxx/cmake/debug/x86_64/CMakeFiles/gles3jni.dir
-H:/gles3jni/app/.cxx/cmake/debug/x86_64/CMakeFiles/edit_cache.dir
-H:/gles3jni/app/.cxx/cmake/debug/x86_64/CMakeFiles/rebuild_cache.dir

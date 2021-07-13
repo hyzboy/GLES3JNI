@@ -1,1 +1,0 @@
-H:\gles3jni\app\src\main\cpp\CMakeLists.txt
