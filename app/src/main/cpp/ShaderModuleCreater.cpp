@@ -69,11 +69,11 @@ namespace
         layout(location=0) in vec2 position;
         layout(location=1) in vec2 texcoord;
 
-        out vec2 out_texcoord;
+        out vec2 fs_texcoord;
 
         void main()
         {
-            out_texcoord=texcoord;
+            fs_texcoord=texcoord;
 
             gl_Position=vec4(position,0.0,1.0);
         })";
@@ -84,13 +84,13 @@ namespace
         precision highp float;
         layout(location=0) uniform highp sampler2D tex;
 
-        in vec2 texcoord;
+        in vec2 fs_texcoord;
 
         layout(location=0) out highp vec4 outColor;
 
         void main()
         {
-            highp vec4 color=texture(tex,texcoord);
+            highp vec4 color=texture(tex,fs_texcoord);
 
             outColor=color;
         })";
