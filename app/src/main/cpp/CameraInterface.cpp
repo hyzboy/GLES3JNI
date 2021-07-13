@@ -62,13 +62,13 @@ namespace
 
 void CreateTestImage()
 {
-    uint8_t *p=swap_buffer->to_hal;
+    uint8_t *p=swap_buffer->from_hal;
 
     for(uint32_t row=0;row<swap_buffer->height;row++)
     {
         for(uint32_t col=0;col<swap_buffer->width;col++)
         {
-            *p=(row&1)^(col&1);
+            *p=((row&1)^(col&1))?255:0;
             ++p;
         }
     }

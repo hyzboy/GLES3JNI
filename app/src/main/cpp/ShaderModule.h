@@ -11,21 +11,20 @@ protected:
     int vertex_shader;
     int fragment_shader;
 
-public:
-
-    const int GetPositionLocation()const{return 0;}
-    const int GetTexCoordLocation()const{return 1;}
-
-    const int GetTextureLocation()const{return 0;}
+    int position_location;
+    int texcoord_location;
+    int texture_location;
 
 public:
 
-    ShaderModule(const char *tag,int p,int vs,int fs):GLClass(tag)
-    {
-        program=p;
-        vertex_shader=vs;
-        fragment_shader=fs;
-    }
+    const int GetPositionLocation()const{return position_location;}
+    const int GetTexCoordLocation()const{return texcoord_location;}
+
+    const int GetTextureLocation()const{return texture_location;}
+
+public:
+
+    ShaderModule(const char *tag,int p,int vs,int fs);
     virtual ~ShaderModule();
 
     bool Begin();

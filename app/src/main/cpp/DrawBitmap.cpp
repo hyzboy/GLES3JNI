@@ -15,7 +15,6 @@ void DrawBitmap::Start()
 {
     BindVAO();
 
-    texture->Bind(shader->GetTextureLocation());
     render_layout.BindToShader(shader->GetPositionLocation());
     texture_uv.BindToShader(shader->GetTexCoordLocation());
 }
@@ -35,6 +34,8 @@ void DrawBitmap::Draw()
     shader->Begin();
 
         BindVAO();
+
+        texture->Bind(shader->GetTextureLocation());
 
         glDrawArrays(GL_TRIANGLE_STRIP,0,4);
 
