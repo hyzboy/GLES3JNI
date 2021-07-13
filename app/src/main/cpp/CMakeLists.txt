@@ -29,6 +29,9 @@ add_library(gles3jni SHARED
             ShaderModule.cpp
             ShaderModuleCreater.cpp
             SMDrawTexture.cpp
+            GLFloatBuffer.cpp
+            RenderLayout.cpp
+            QuadUV.cpp
             CameraInterface.cpp)
 
 # Include libraries needed for gles3jni lib
