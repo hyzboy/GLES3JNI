@@ -19,6 +19,8 @@ public:
 
     void SetBlend(bool b){blend=b;}
 
+    void Start() override;
+
     void Draw() override;
 };
 #endif //GLES3JNI_DRAWBITMAP_H

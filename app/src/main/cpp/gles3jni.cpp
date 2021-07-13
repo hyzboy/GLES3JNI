@@ -255,6 +255,8 @@ void InitDrawBitmap()
     VirtualCamera2Texture(texture);
 
     draw_object=new DrawBitmap(texture);
+
+    draw_object->Start();
 }
 
 extern "C" {

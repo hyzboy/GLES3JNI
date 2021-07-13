@@ -15,7 +15,7 @@ void RenderLayout::Set(float l,float t,float w,float h)
 
     t *= -1;
 
-    float *vertices_data=GLFloatBuffer::Map();
+    float vertices_data[8];
 
     vertices_data[0] = l;
     vertices_data[1] = b;
@@ -26,5 +26,5 @@ void RenderLayout::Set(float l,float t,float w,float h)
     vertices_data[6] = r;
     vertices_data[7] = t;
 
-    GLFloatBuffer::Unmap();
+    WriteData(vertices_data,8);
 }

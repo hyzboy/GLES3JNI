@@ -11,6 +11,15 @@ DrawBitmap::DrawBitmap(GLTexture *tex):DrawObject("DrawBitmap")
     blend=false;
 }
 
+void DrawBitmap::Start()
+{
+    BindVAO();
+
+    texture->Bind(shader->GetTextureLocation());
+    render_layout.BindToShader(shader->GetPositionLocation());
+    texture_uv.BindToShader(shader->GetTexCoordLocation());
+}
+
 void DrawBitmap::Draw()
 {
     if(blend)
@@ -25,13 +34,13 @@ void DrawBitmap::Draw()
 
     shader->Begin();
 
-        texture->Bind(shader->GetTextureLocation());
-        render_layout.BindToShader(shader->GetPositionLocation());
-        texture_uv.BindToShader(shader->GetTexCoordLocation());
+        BindVAO();
 
         glDrawArrays(GL_TRIANGLE_STRIP,0,4);
 
         texture->Unbind(shader->GetTextureLocation());
+
+        UnbindVAO();
 
     shader->End();
 

@@ -9,15 +9,21 @@ class DrawObject:public GLClass
 {
 protected:
 
+    GLuint vao;
     QuadUV texture_uv;
     RenderLayout render_layout;
 
 public:
 
-    DrawObject(const char *tag):GLClass(tag){}
-    virtual ~DrawObject()=default;
+    DrawObject(const char *tag);
+    virtual ~DrawObject();
 
     void SetLayout(float l,float t,float w,float h){render_layout.Set(l,t,w,h);}
+
+    void BindVAO();
+    void UnbindVAO();
+
+    virtual void Start()=0;
 
     virtual void Draw()=0;
 };//class DrawObject

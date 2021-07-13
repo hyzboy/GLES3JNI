@@ -6,6 +6,11 @@ class RenderLayout:public GLFloatBuffer
 {
 public:
 
+    RenderLayout()
+    {
+        Set(0,0,1,1);
+    }
+
     /**
      * 设置布局<br>
      * 坐标使用左上角为0,0，右下角为1,1的数值范围。例如设置田字型格就是
