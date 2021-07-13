@@ -1,6 +1,7 @@
 #include "CameraInterface.h"
 #include <sys/system_properties.h>
 #include <string.h>
+#include "GLTexture.h"
 
 namespace
 {
@@ -93,14 +94,15 @@ void GetVirtualCameraSize(uint32_t &w,uint32_t &h)
     h=swap_buffer->height;
 }
 
-bool VirtualCamera2Texture(const GLuint texture_id)
+bool VirtualCamera2Texture(GLTexture *texture)
 {
     if(!swap_buffer)
         return(false);
 
-    glBindTexture(GL_TEXTURE_2D,texture_id);
-    glTexImage2D(GL_TEXTURE_2D,0,GL_R8,swap_buffer->width,swap_buffer->height,0,GL_RED,GL_UNSIGNED_BYTE,swap_buffer->from_hal);
+    if(!texture)
+        return(false);
 
+    texture->SetLum(swap_buffer->from_hal,swap_buffer->width,swap_buffer->height);
     return(true);
 }
 

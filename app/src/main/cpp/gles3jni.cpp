@@ -22,6 +22,8 @@
 #include "gles3jni.h"
 #include"CameraInterface.h"
 #include"ShaderModule.h"
+#include"DrawBitmap.h"
+#include"GLTexture.h"
 
 const Vertex QUAD[4] = {
     // Square with diagonal < 2 so that it fits in a [-1 .. 1]^2 square
@@ -239,6 +241,22 @@ void Renderer::render() {
 
 static Renderer* g_renderer = NULL;
 
+static GLTexture *texture=nullptr;
+static DrawObject *draw_object=nullptr;
+
+void InitDrawBitmap()
+{
+    StartVirtualCameraInterface();
+
+    InitShaderModule();
+
+    texture=new GLTexture();
+
+    VirtualCamera2Texture(texture);
+
+    draw_object=new DrawBitmap(texture);
+}
+
 extern "C" {
     JNIEXPORT void JNICALL Java_com_android_gles3jni_GLES3JNILib_init(JNIEnv* env, jobject obj);
     JNIEXPORT void JNICALL Java_com_android_gles3jni_GLES3JNILib_resize(JNIEnv* env, jobject obj, jint width, jint height);
@@ -261,10 +279,7 @@ Java_com_android_gles3jni_GLES3JNILib_init(JNIEnv* env, jobject obj) {
     if (strstr(versionStr, "OpenGL ES 3.")) {
         g_renderer = createES3Renderer();
 
-        StartVirtualCameraInterface();
-
-        InitShaderModule();
-        ShaderModule *sm=GetShaderModule(InlineShader::SimpleTexture);
+        InitDrawBitmap();
     } else {
         ALOGE("Unsupported OpenGL ES version");
     }
@@ -281,5 +296,7 @@ JNIEXPORT void JNICALL
 Java_com_android_gles3jni_GLES3JNILib_step(JNIEnv* env, jobject obj) {
     if (g_renderer) {
         g_renderer->render();
+
+        draw_object->Draw();
     }
 }

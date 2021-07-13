@@ -37,5 +37,7 @@ public:
     {
         glUnmapBuffer(GL_ARRAY_BUFFER);
     }
+
+    void BindToShader(int sampler_location);
 };//class GLFloatBuffer
 #endif //GLES3JNI_GLFLOATBUFFER_H

@@ -32,6 +32,9 @@ add_library(gles3jni SHARED
             GLFloatBuffer.cpp
             RenderLayout.cpp
             QuadUV.cpp
+            GLTexture.cpp
+            DrawObject.cpp
+            DrawBitmap.cpp
             CameraInterface.cpp)
 
 # Include libraries needed for gles3jni lib
