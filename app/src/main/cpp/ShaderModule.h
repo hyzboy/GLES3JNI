@@ -13,6 +13,13 @@ protected:
 
 public:
 
+    const int GetPositionLocation()const{return 0;}
+    const int GetTexCoordLocation()const{return 1;}
+
+    const int GetTextureLocation()const{return 0;}
+
+public:
+
     ShaderModule(const char *tag,int p,int vs,int fs):GLClass(tag)
     {
         program=p;
@@ -21,10 +28,8 @@ public:
     }
     virtual ~ShaderModule();
 
-    const int GetPositionLocation()const{return 0;}
-    const int GetTexCoordLocation()const{return 1;}
-
-    const int GetTextureLocation()const{return 0;}
+    bool Begin();
+    void End();
 };//class ShaderModule
 
 enum class InlineShader
