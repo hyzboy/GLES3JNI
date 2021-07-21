@@ -63,8 +63,7 @@ namespace
         delete[] log;
     }
 
-    constexpr char common_vertes_shader_source[] = R"(
-        #version 300 es
+    constexpr char common_vertes_shader_source[] = R"(#version 300 es
 
         layout(location=0) in vec2 position;
         layout(location=1) in vec2 texcoord;
@@ -78,8 +77,7 @@ namespace
             gl_Position=vec4(position,0.0,1.0);
         })";
 
-    constexpr char draw_texture_fragment_shader_source[]=R"(
-        #version 300 es
+    constexpr char draw_texture_fragment_shader_source[]=R"(#version 300 es
 
         precision highp float;
         layout(location=0) uniform highp sampler2D tex;
