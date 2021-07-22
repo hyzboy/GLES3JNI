@@ -297,6 +297,7 @@ Java_com_android_gles3jni_GLES3JNILib_resize(JNIEnv* env, jobject obj, jint widt
 JNIEXPORT void JNICALL
 Java_com_android_gles3jni_GLES3JNILib_step(JNIEnv* env, jobject obj) {
     if (g_renderer) {
+        Texture2VirtualCamera();
         g_renderer->render();
 
         draw_object->Draw();

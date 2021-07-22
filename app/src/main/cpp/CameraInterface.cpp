@@ -3,6 +3,10 @@
 #include <string.h>
 #include "GLTexture.h"
 
+#include<unistd.h>
+#include<fcntl.h>
+#include<sys/stat.h>
+
 namespace
 {
     template<typename T>
@@ -24,7 +28,7 @@ namespace
 
         uint32_t y_bytes;
         uint32_t uv_bytes;
-        uint32_t total_bytes;
+        uint32_t yuv_bytes;
         GLsizei rgba_bytes;
 
         uint8_t *from_hal;          //来自HAL层的数据
@@ -41,11 +45,11 @@ namespace
 
             y_bytes=w*h;
             uv_bytes=y_bytes>>2;
-            total_bytes=y_bytes+uv_bytes+uv_bytes;
+            yuv_bytes= y_bytes + uv_bytes + uv_bytes;
             rgba_bytes=y_bytes<<2;
 
-            from_hal=new_zero<uint8_t>(total_bytes);
-            to_hal=new_zero<uint8_t>(total_bytes);
+            from_hal=new_zero<uint8_t>(yuv_bytes);
+            to_hal=new_zero<uint8_t>(yuv_bytes);
             rgba=new_zero<uint8_t>(rgba_bytes);
         }
 
@@ -121,6 +125,17 @@ void RGBA2YUV()
     }
 }
 
+void SaveToQData()
+{
+    int fp=open("/dev/qdata",O_WRONLY);
+
+    if(fp==-1)return;
+
+    write(fp,swap_buffer->to_hal,swap_buffer->yuv_bytes);
+
+    close(fp);
+}
+
 bool Texture2VirtualCamera()
 {
     if(!swap_buffer)
@@ -129,6 +144,8 @@ bool Texture2VirtualCamera()
     glReadnPixels(0,0,swap_buffer->width,swap_buffer->height,GL_RGBA,GL_UNSIGNED_BYTE,swap_buffer->rgba_bytes,(void *)(swap_buffer->rgba));
 
     RGBA2YUV();
+
+    SaveToQData();
 
     return(true);
 }
