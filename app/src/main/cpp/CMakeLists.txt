@@ -22,6 +22,10 @@ cmake_minimum_required(VERSION 3.4.1)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fno-rtti -fno-exceptions -Wall")
 
+add_library(lib_oglsystem SHARED IMPORTED)
+set_target_properties(lib_oglsystem PROPERTIES IMPORTED_LOCATION
+        ${CMAKE_CURRENT_SOURCE_DIR}/../../../../libs/${ANDROID_ABI}/openglsystem.so)
+
 add_library(gles3jni SHARED
             gles3jni.cpp
             RendererES3.cpp
@@ -43,4 +47,6 @@ target_link_libraries(gles3jni
             android
             EGL
             log
-            m)
+            m
+            lib_oglsystem
+        )

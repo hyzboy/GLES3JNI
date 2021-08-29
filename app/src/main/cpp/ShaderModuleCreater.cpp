@@ -1,5 +1,5 @@
 #include"ShaderModule.h"
-#include<string.h>
+#include<cstring>
 
 namespace
 {
@@ -10,7 +10,7 @@ namespace
         if (id <= 0)
             return -1;
 
-        glShaderSource(id, 1, &source, 0);
+        glShaderSource(id, 1, &source, nullptr);
         glCompileShader(id);
 
         GLint status;
@@ -61,6 +61,7 @@ namespace
         __android_log_print(ANDROID_LOG_ERROR, "LinkProgram", "Shader program link error: %s", log);
 
         delete[] log;
+        return(-1);
     }
 
     constexpr char common_vertes_shader_source[] = R"(#version 300 es
