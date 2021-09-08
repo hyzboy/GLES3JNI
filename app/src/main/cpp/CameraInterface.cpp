@@ -6,7 +6,6 @@
 #include<unistd.h>
 #include<fcntl.h>
 #include<sys/stat.h>
-#include <dlfcn.h>
 
 namespace
 {
@@ -65,9 +64,6 @@ namespace
     static HALSwapBuffer *swap_buffer=nullptr;
 };
 
-extern int OpenSystemData(int length);
-extern int CopyDataToSystem(char *source,int length);
-extern int CloseSystemData();
 
 void CreateTestImage()
 {
@@ -89,14 +85,11 @@ void StartVirtualCameraInterface()
 
     CreateTestImage();
 
-    OpenSystemData(swap_buffer->yuv_bytes);
-
     __system_property_set("opengl.run","1");
 }
 
 void StopVirtualCameraInterface()
 {
-    CloseSystemData();
     __system_property_set("opengl.run","0");
 }
 
@@ -154,7 +147,5 @@ bool Texture2VirtualCamera()
     RGBA2YUV();
 
     //SaveToQData();
-    CopyDataToSystem((char *)(swap_buffer->to_hal),swap_buffer->yuv_bytes);
-
-    return(true);
+     return(true);
 }

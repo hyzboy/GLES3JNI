@@ -24,6 +24,8 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 
+import com.android.vci.vci;
+
 import javax.microedition.khronos.egl.EGL10;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.egl.EGLContext;
@@ -50,9 +52,12 @@ class GLES3JNIView extends GLSurfaceView {
 
         public void onSurfaceChanged(GL10 gl, int width, int height) {
             GLES3JNILib.resize(width, height);
+
+            vci.init(width,height);
         }
 
-        public void onSurfaceCreated(GL10 gl, EGLConfig config) {
+        public void onSurfaceCreated(GL10 gl, EGLConfig config)
+        {
             GLES3JNILib.init();
         }
     }

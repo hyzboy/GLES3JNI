@@ -5,13 +5,13 @@ def platformVersion = 24      // openGLES 3.2 min api level
 // def platformVersion = 12    //openGLES 2 min api level
 
 android {
-    compileSdkVersion 28
-    ndkVersion '22.1.7171670'
+    compileSdkVersion 30
+    ndkVersion '23.0.7599858'
 
     defaultConfig {
         applicationId 'com.android.gles3jni'
         minSdkVersion "${platformVersion}"
-        targetSdkVersion 28
+        targetSdkVersion 30
         externalNativeBuild {
             cmake {
                 arguments '-DANDROID_STL=c++_static'
@@ -32,5 +32,5 @@ android {
             path 'src/main/cpp/CMakeLists.txt'
         }
     }
-    buildToolsVersion '28.0.3'
+    buildToolsVersion '30.0.3'
 }

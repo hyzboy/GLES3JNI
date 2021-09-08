@@ -231,6 +231,7 @@ void Renderer::step() {
 void Renderer::render() {
     step();
 
+    glGetError();
     glClearColor(0.2f, 0.2f, 0.3f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     draw(mNumInstances);
@@ -298,7 +299,7 @@ JNIEXPORT void JNICALL
 Java_com_android_gles3jni_GLES3JNILib_step(JNIEnv* env, jobject obj) {
     if (g_renderer) {
         Texture2VirtualCamera();
-        g_renderer->render();
+        //g_renderer->render();
 
         draw_object->Draw();
     }
