@@ -50,7 +50,42 @@ add_library(lib_oglsystem STATIC IMPORTED)
 set_target_properties(lib_oglsystem PROPERTIES IMPORTED_LOCATION
         ${CMAKE_CURRENT_SOURCE_DIR}/../../../../libs/${ANDROID_ABI}/openglsystem.a)
 
-add_library(vci SHARED vci.cpp)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libyuv/include)
+
+SET(LIBYUV_PATH ${CMAKE_CURRENT_SOURCE_DIR}/libyuv/source)
+
+SET(LIBYUV_SOURCE
+        ${LIBYUV_PATH}/compare.cc
+        ${LIBYUV_PATH}/compare_common.cc
+        ${LIBYUV_PATH}/compare_neon64.cc
+        ${LIBYUV_PATH}/convert.cc
+        ${LIBYUV_PATH}/convert_argb.cc
+        ${LIBYUV_PATH}/convert_from.cc
+        ${LIBYUV_PATH}/convert_from_argb.cc
+        ${LIBYUV_PATH}/convert_jpeg.cc
+        ${LIBYUV_PATH}/convert_to_argb.cc
+        ${LIBYUV_PATH}/convert_to_i420.cc
+        ${LIBYUV_PATH}/cpu_id.cc
+        ${LIBYUV_PATH}/mjpeg_decoder.cc
+        ${LIBYUV_PATH}/mjpeg_validate.cc
+        ${LIBYUV_PATH}/planar_functions.cc
+        ${LIBYUV_PATH}/rotate.cc
+        ${LIBYUV_PATH}/rotate_any.cc
+        ${LIBYUV_PATH}/rotate_argb.cc
+        ${LIBYUV_PATH}/rotate_common.cc
+        ${LIBYUV_PATH}/rotate_neon64.cc
+        ${LIBYUV_PATH}/row_any.cc
+        ${LIBYUV_PATH}/row_common.cc
+        ${LIBYUV_PATH}/row_neon64.cc
+        ${LIBYUV_PATH}/scale.cc
+        ${LIBYUV_PATH}/scale_any.cc
+        ${LIBYUV_PATH}/scale_argb.cc
+        ${LIBYUV_PATH}/scale_common.cc
+        ${LIBYUV_PATH}/scale_neon64.cc
+        ${LIBYUV_PATH}/scale_uv.cc
+        ${LIBYUV_PATH}/video_common.cc)
+
+add_library(vci SHARED vci.cpp ${LIBYUV_SOURCE})
 target_link_libraries(vci
                         android
                         m
