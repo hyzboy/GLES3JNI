@@ -42,7 +42,7 @@ extern "C"
 
         uint8_t *ptr=(uint8_t *)(env->GetByteArrayElements(data,&is_copy));
 
-        libyuv::ARGBToNV21(ptr,vc_width*4,
+        libyuv::ABGRToNV21(ptr,vc_width*4,
                            nv21_data,   vc_width,
                            nv21_vu,     vc_width,
                            vc_width,    vc_height);
@@ -165,5 +165,8 @@ extern "C"
     {
         __system_property_set("opengl.run","0");
         CloseSystemData();
+        delete[] nv21_data;
+        nv21_data=nullptr;
+        nv21_vu=nullptr;
     }
 }
