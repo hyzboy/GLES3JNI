@@ -1,10 +1,4 @@
 #include "GLClass.h"
-#include<string.h>
-
-GLClass::GLClass(const char *tag)
-{
-    strcpy(log_tag,tag);
-}
 
 void GLClass::ClearGLError()
 {

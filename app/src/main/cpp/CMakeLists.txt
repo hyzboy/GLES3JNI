@@ -25,6 +25,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fno-rtti -fno-exceptions -Wa
 add_library(gles3jni SHARED
             gles3jni.cpp
             RendererES3.cpp
+            Log.cpp
             GLClass.cpp
             ShaderModule.cpp
             ShaderModuleCreater.cpp
